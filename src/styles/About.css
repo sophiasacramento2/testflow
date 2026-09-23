@@ -1,0 +1,174 @@
+.about-page {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+
+  padding: 42px 48px 60px;
+
+  background-color: #f8fafc;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.about-header {
+  margin-bottom: 30px;
+}
+
+.about-header h1 {
+  color: #172033;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+
+  margin: 5px 0 6px;
+}
+
+.about-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 28px;
+
+  margin-bottom: 20px;
+
+  background-color: #172f4f;
+
+  border-radius: 14px;
+
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+.about-hero-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background-color: #2563eb;
+
+  border-radius: 13px;
+}
+
+.about-hero h2 {
+  color: #ffffff;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  margin-bottom: 6px;
+}
+
+.about-hero p {
+  max-width: 750px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   PROBLEMA E SOLUÇÃO
+========================= */
+
+.about-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.about-info-card {
+  flex: 1;
+
+  padding: 25px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e7ecf2;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+
+  transition: 0.2s;
+}
+
+.about-info-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.07);
+}
+
+.about-card-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  margin-bottom: 17px;
+}
+
+.problem-icon {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.solution-icon {
+  color: #2563eb;
+  background-color: #dbeafe;
+}
+
+.about-info-card h2 {
+  color: #1e293b;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.about-info-card p {
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+  .about-page {
+    padding: 30px 25px;
+  }
+
+  .about-grid {
+    flex-direction: column;
+  }
+
+  .about-hero {
+    align-items: flex-start;
+  }
+}
