@@ -10,6 +10,8 @@ import {
 
 import { useNavigate } from 'react-router-dom'
 
+import StatusCard from '../components/StatusCard'
+
 function Dashboard({ testCases }) {
   const navigate = useNavigate()
 
@@ -69,57 +71,37 @@ function Dashboard({ testCases }) {
 
       <section className="status-cards">
 
-        <div className="status-card total-card">
-          <div className="card-top">
-            <div className="card-icon total-icon">
-              <ClipboardList size={22} />
-            </div>
+        <StatusCard
+          icon={<ClipboardList size={22} />}
+          color="total"
+          label="Total"
+          value={testCases.length}
+          description="Casos cadastrados"
+        />
 
-            <span>Total</span>
-          </div>
+        <StatusCard
+          icon={<CircleCheck size={22} />}
+          color="success"
+          label="Sucesso"
+          value={passed}
+          description="Testes que passaram"
+        />
 
-          <strong>{testCases.length}</strong>
-          <p>Casos cadastrados</p>
-        </div>
+        <StatusCard
+          icon={<CircleX size={22} />}
+          color="failure"
+          label="Atenção"
+          value={failed}
+          description="Testes que falharam"
+        />
 
-        <div className="status-card">
-          <div className="card-top">
-            <div className="card-icon success-icon">
-              <CircleCheck size={22} />
-            </div>
-
-            <span>Sucesso</span>
-          </div>
-
-          <strong>{passed}</strong>
-          <p>Testes que passaram</p>
-        </div>
-
-        <div className="status-card">
-          <div className="card-top">
-            <div className="card-icon failure-icon">
-              <CircleX size={22} />
-            </div>
-
-            <span>Atenção</span>
-          </div>
-
-          <strong>{failed}</strong>
-          <p>Testes que falharam</p>
-        </div>
-
-        <div className="status-card">
-          <div className="card-top">
-            <div className="card-icon pending-icon">
-              <Clock3 size={22} />
-            </div>
-
-            <span>Pendentes</span>
-          </div>
-
-          <strong>{pending}</strong>
-          <p>Aguardando execução</p>
-        </div>
+        <StatusCard
+          icon={<Clock3 size={22} />}
+          color="pending"
+          label="Pendentes"
+          value={pending}
+          description="Aguardando execução"
+        />
 
       </section>
 
