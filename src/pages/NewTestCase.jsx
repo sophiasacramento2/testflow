@@ -32,16 +32,23 @@ function NewTestCase({ addTestCase }) {
     })
   }
 
-  function handleSubmit(event) {
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
+
+  async function handleSubmit(event) {
     event.preventDefault()
 
-    const newTestCase = {
-      id: `TC${String(Date.now()).slice(-4)}`,
-      ...form
-    }
+    setSaving(true)
+    setError('')
 
-    addTestCase(newTestCase)
-    navigate('/casos')
+    try {
+      // O ID (TC001, TC002...) é gerado pelo banco de dados
+      await addTestCase(form)
+      navigate('/casos')
+    } catch (err) {
+      setError(err.message)
+      setSaving(false)
+    }
   }
 
   return (
@@ -261,6 +268,12 @@ function NewTestCase({ addTestCase }) {
 
         </section>
 
+        {error && (
+          <div className="form-error">
+            {error}
+          </div>
+        )}
+
         <div className="form-actions">
 
           <button
@@ -274,9 +287,10 @@ function NewTestCase({ addTestCase }) {
           <button
             type="submit"
             className="save-button"
+            disabled={saving}
           >
             <Save size={18} />
-            Salvar Caso
+            {saving ? 'Salvando...' : 'Salvar Caso'}
           </button>
 
         </div>

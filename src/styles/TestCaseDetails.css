@@ -270,3 +270,132 @@
     flex-direction: column;
   }
 }
+/* AÇÕES: EXCLUIR E REGISTRAR RESULTADO */
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  color: #dc2626;
+  background-color: #ffffff;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-button:hover {
+  color: #ffffff;
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.execution-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  max-width: 1000px;
+  margin-bottom: 20px;
+  padding: 20px 24px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e7ecf2;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+}
+
+.execution-card h2 {
+  color: #1e293b;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.execution-card p {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.execution-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.execution-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 9px 14px;
+
+  color: #64748b;
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.execution-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.execution-button.passed:hover,
+.execution-button.passed.selected {
+  color: #15803d;
+  background-color: #dcfce7;
+  border-color: #86efac;
+}
+
+.execution-button.failed:hover,
+.execution-button.failed.selected {
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.execution-button.not-run:hover,
+.execution-button.not-run.selected {
+  color: #a16207;
+  background-color: #fef9c3;
+  border-color: #fde047;
+}
+
+.details-error {
+  max-width: 1000px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  color: #b91c1c;
+  background-color: #fee2e2;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}

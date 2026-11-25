@@ -535,3 +535,57 @@ tbody tr:last-child td {
   background-color: #eff6ff;
   color: #2563eb;
 }
+/* CARREGANDO / ERRO DE CONEXÃO COM O BANCO */
+
+.app-feedback {
+  flex: 1;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  color: #64748b;
+  background-color: #f8fafc;
+}
+
+.app-feedback h2 {
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.app-feedback p {
+  font-size: 14px;
+}
+
+.app-feedback button {
+  margin-top: 10px;
+  padding: 10px 18px;
+
+  color: #ffffff;
+  background-color: #2563eb;
+
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.spin {
+  color: #2563eb;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

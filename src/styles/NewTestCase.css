@@ -272,3 +272,20 @@
     max-width: none;
   }
 }
+/* ERRO AO SALVAR */
+
+.form-error {
+  padding: 12px 16px;
+
+  color: #b91c1c;
+  background-color: #fee2e2;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+.save-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
