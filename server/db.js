@@ -1,6 +1,10 @@
 // Conexão com o banco de dados MySQL
 import mysql from 'mysql2/promise'
-import 'dotenv/config'
+import dotenv from 'dotenv'
+import { fileURLToPath } from 'url'
+
+// Lê o arquivo .env desta pasta (server), de onde quer que o servidor seja iniciado
+dotenv.config({ path: fileURLToPath(new URL('.env', import.meta.url)), quiet: true })
 
 const db = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
